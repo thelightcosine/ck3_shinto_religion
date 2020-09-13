@@ -1,0 +1,22 @@
+﻿
+
+sohei = {
+	type = skirmishers
+	
+	damage = 20
+	toughness = 24
+	pursuit = 10
+	screen = 20
+	
+	counters = {
+		heavy_infantry = 1
+	}
+
+	buy_cost = { gold = khandayat_recruitment_cost }
+	low_maintenance_cost = { gold = khandayat_low_maint_cost }
+	high_maintenance_cost = { gold = khandayat_high_maint_cost }
+	
+	stack = 100
+	ai_quality = { value = 25 }
+	icon = skirmishers
+}
