@@ -62,3 +62,9 @@
  shinbutsu_shugo_desc:0 "Shinbutsu-shūgō is the blending of Shinto and Buddhism. In this rpactice the two belief systems have become inseperable from each other."
  shinbutsu_shugo_adherent:0 "Shintoist"
  shinbutsu_shugo_adherent_plural:0 "Shintoists"
+
+ holy_order_yamabushi:0 "Yamabushi"
+ holy_order_negoroji_sohei:0 "Negoroji Sōhei"
+ holy_order_nara_sohei:0 "Nara Sōhei"
+ holy_order_miidera_sohei:0 "Miidera Sōhei"
+ holy_order_mount_hiei_sohei:0 "Mount Hiei Sōhei"

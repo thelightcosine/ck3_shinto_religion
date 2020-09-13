@@ -1,5 +1,6 @@
 ﻿shinto_religion = {
 	family = rf_eastern
+	graphical_faith = dharmic_gfx
 	doctrine = eastern_hostility_doctrine
 
 	#Main Group
@@ -46,11 +47,11 @@
 	}
 
 	holy_order_names = {
-		{ name = "yamabushi" }
-		{ name = "negoroji_sōhei" }
-		{ name = "nara_sōhei" }
-		{ name = "miidera_sōhei" }
-		{ name = "mount_hiei_sōhei" }
+		{ name = "holy_order_yamabushi" }
+		{ name = "holy_order_negoroji_sohei" }
+		{ name = "holy_order_nara_sohei" }
+		{ name = "holy_order_miidera_sohei" }
+		{ name = "holy_order_mount_hiei_sohei" }
 	}
 
 	holy_order_maa = { sohei }
@@ -207,11 +208,12 @@
 
 		shinbutsu_shugo = {
 			color = { 0.8 0.3 0.2 }
-			icon = shinbutusu_shugo
+			icon = shinbutsu_shugo
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_inner_journey
 			doctrine = tenet_communal_identity
+			doctrine = tenet_eastern_syncretism
 		}
 	}
 }
