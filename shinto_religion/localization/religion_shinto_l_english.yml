@@ -69,10 +69,10 @@
  holy_order_miidera_sohei:0 "Miidera Sōhei"
  holy_order_mount_hiei_sohei:0 "Mount Hiei Sōhei"
 
+ shinto_startup_effect_message:0 "Your realm will convert to Shinto"
  shinto_startup_decision_title:0 "The Start of Shintoism"
- shinto_startup_decision_desc:0  "You have decided to bring the wisdom of the Shinto faith to your people."
- shinto_startup_decision_effect_message:0 "You and your realm will convert to Shinto"
+ shinto_startup_decision_desc:0 "You have decided to bring the wisdom of the Shinto faith to your people."
  shinto_startup_event_desc:0 "The wisdom of the Shinto faith spreads!"
- shinto_startup_decision_button:0 "Our Awakening awaits."
+ shinto_startup_decision_button:0 "The Kami reveal themselves!"
  shinto_kami_no_michi_convert:0 "Convert to the purity of Kami-no-michi"
  shinto_shinbutsu_shugo_convert:0 "Convert to the wisdom of Shinbutsu-shūgō"

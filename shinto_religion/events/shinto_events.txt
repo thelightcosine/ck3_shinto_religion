@@ -10,16 +10,18 @@ shinto_startup_event.0001 = {
 		name = shinto_kami_no_michi_convert
 		set_character_faith_with_conversion = faith:kami_no_michi
 
-		every_dynasty_member ={
-			limit = {
-				is_alive = yes
-				is_ai = yes
-				target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
-				# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+		dynasty = {
+			every_dynasty_member ={
+				limit = {
+					is_alive = yes
+					is_ai = yes
+					target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
+					# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+				}
+				set_character_faith_with_conversion = faith:kami_no_michi
 			}
-			set_character_faith_with_conversion = faith:kami_no_michi
 		}
-
+		
 		every_vassal_or_below ={
 			limit = {
 				is_alive = yes
@@ -39,14 +41,16 @@ shinto_startup_event.0001 = {
 		name = shinto_shinbutsu_shugo_convert
 		set_character_faith_with_conversion = faith:shinbutsu_shugo
 
-		every_dynasty_member ={
-			limit = {
-				is_alive = yes
-				is_ai = yes
-				target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
-				# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+		dynasty = {
+			every_dynasty_member ={
+				limit = {
+					is_alive = yes
+					is_ai = yes
+					target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
+					# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+				}
+				set_character_faith_with_conversion = faith:shinbutsu_shugo
 			}
-			set_character_faith_with_conversion = faith:shinbutsu_shugo
 		}
 
 		every_vassal_or_below ={

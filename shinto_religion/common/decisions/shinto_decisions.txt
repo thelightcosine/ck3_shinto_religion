@@ -26,7 +26,7 @@
 	cost = {}
 	effect = {
 		custom_description = {
-			text = shinto_startup_decision_effect_message
+			text = shinto_startup_effect_message
 			subject = capital_county
 			object = religion:shinto_religion
 		}
