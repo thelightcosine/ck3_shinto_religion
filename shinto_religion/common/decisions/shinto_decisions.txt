@@ -1,0 +1,44 @@
+﻿shinto_startup_convert = {
+	title = shinto_startup_decision_title
+	desc = shinto_startup_decision_desc
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
+	major = yes
+	ai_goal = no
+	ai_check_frequency = 0
+	
+	confirm_text = shinto_startup_decision_button
+
+	#selection_tooltip = <key> | { ... } # override tooltip when selecting the decision from the decision list, default: "<key>_tooltip"; supports dynamic descriptions like in events (first_valid, ...); scope: character
+
+	is_shown = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:shinto_startup
+			}
+		}
+	}
+	is_valid = {
+		always = yes
+	}
+
+	cost = {}
+	effect = {
+		custom_description = {
+			text = shinto_startup_decision_effect_message
+			subject = capital_county
+			object = religion:shinto_religion
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:shinto_startup
+		}
+		trigger_event = shinto_startup_event.0001
+	}
+
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+
+}
