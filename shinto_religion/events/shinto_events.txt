@@ -8,7 +8,19 @@ shinto_startup_event.0001 = {
 
 	option = {
 		name = shinto_kami_no_michi_convert
+
+		faith = {
+			save_scope_as = old_faith
+		}
+
 		set_character_faith_with_conversion = faith:kami_no_michi
+
+		trigger_event = faith_conversion.0001
+		trigger_event = faith_conversion.0003
+		trigger_event = faith_creation.0001
+		trigger_event = faith_creation.0002
+		trigger_event = faith_creation.0003
+		trigger_event = faith_creation.1000
 
 		dynasty = {
 			every_dynasty_member ={
@@ -39,7 +51,19 @@ shinto_startup_event.0001 = {
 
 	option = {
 		name = shinto_shinbutsu_shugo_convert
+
+		faith = {
+			save_scope_as = old_faith
+		}
+
 		set_character_faith_with_conversion = faith:shinbutsu_shugo
+
+		trigger_event = faith_conversion.0001
+		trigger_event = faith_conversion.0003
+		trigger_event = faith_creation.0001
+		trigger_event = faith_creation.0002
+		trigger_event = faith_creation.0003
+		trigger_event = faith_creation.1000
 
 		dynasty = {
 			every_dynasty_member ={
@@ -66,5 +90,60 @@ shinto_startup_event.0001 = {
 		every_realm_county ={
 			set_county_faith = faith:shinbutsu_shugo
 		}
+	}
+
+	option = {
+		name = state_shinto_convert
+	
+		faith = {
+			save_scope_as = old_faith
+		}
+		set_character_faith_with_conversion = faith:state_shinto
+
+		trigger_event = faith_conversion.0001
+		trigger_event = faith_conversion.0003
+		trigger_event = faith_creation.0001
+		trigger_event = faith_creation.0002
+		trigger_event = faith_creation.0003
+		trigger_event = faith_creation.1000
+
+		dynasty = {
+			every_dynasty_member ={
+				limit = {
+					is_alive = yes
+					is_ai = yes
+					target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
+					# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+				}
+				set_character_faith_with_conversion = faith:state_shinto
+			}
+		}
+
+		every_vassal_or_below ={
+			limit = {
+				is_alive = yes
+				is_ai = yes
+				target_is_liege_or_above = root #If they have travelled outside of your realm/control, they will not be converted.
+				# Children are converted regardless of Landed status, assuming they are Landed within your realm.
+			}
+			set_character_faith_with_conversion = faith:state_shinto
+		}
+
+		every_realm_county ={
+			set_county_faith = faith:state_shinto
+		}
+
+		
+	}
+}
+
+shinto_startup_event.0002 = {
+	title = shinto_test_title
+	desc = shinto_test_desc
+	right_portrait = root
+	theme = faith
+
+	option = {
+		name = shinto_test_title
 	}
 }

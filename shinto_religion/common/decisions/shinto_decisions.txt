@@ -5,7 +5,6 @@
 
 	major = yes
 	ai_goal = no
-	ai_check_frequency = 0
 	
 	confirm_text = shinto_startup_decision_button
 
@@ -19,16 +18,11 @@
 			}
 		}
 	}
-	is_valid = {
-		always = yes
-	}
 
 	cost = {}
 	effect = {
 		custom_description = {
-			text = shinto_startup_effect_message
-			subject = capital_county
-			object = religion:shinto_religion
+			text = start_shinto_effect
 		}
 		#Can only be done once
 		add_to_global_variable_list = {

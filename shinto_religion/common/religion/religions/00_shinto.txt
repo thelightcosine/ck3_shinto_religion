@@ -214,5 +214,21 @@
 			doctrine = tenet_inner_journey
 			doctrine = tenet_communal_identity
 		}
+
+		state_shinto = {
+			color = { 0.8 0.5 0.2 }
+			icon = state_shinto
+
+			doctrine = tenet_ancestor_worship
+			doctrine = tenet_pursuit_of_power
+			doctrine = tenet_communal_identity
+
+			doctrine = doctrine_theocracy_lay_clergy
+			doctrine = doctrine_temporal_head
+			doctrine = doctrine_homosexuality_crime
+			doctrine = doctrine_deviancy_crime
+			doctrine = doctrine_clerical_function_recruitment
+			doctrine = doctrine_clerical_succession_temporal_appointment
+		}
 	}
 }

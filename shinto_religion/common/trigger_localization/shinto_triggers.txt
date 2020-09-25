@@ -1,0 +1,3 @@
+shinto_startup_decision_trigger = {
+	global_not = shinto_startup_decision.trigger
+}
