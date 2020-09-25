@@ -86,3 +86,6 @@
 
  shinto_test_title:0 "Testing Event re-direction"
  shinto_test_desc:0 "Congrats! You redirected back to this event"
+
+ state_shinto_religious_head_title:0 "Divine"
+ state_shinto_religious_head_title_name:0 "Divine Throne"
