@@ -1,0 +1,154 @@
+namespace = inari_shrine
+
+inari_shrine.0001 = {
+	hidden = yes 
+
+	trigger = {
+		any_realm_county = {
+			exists = holder
+			holder = {
+				religion = religion:shinto_religion
+			}
+			religion = religion:shinto_religion
+		}
+		NOT = {
+			has_character_flag = inari_shrine_completed
+		}
+	}
+
+	immediate = {
+		random_realm_county = {
+			limit = {
+				exists = holder 
+				holder = root 
+				religion = religion:shinto_religion
+			}
+
+			save_scope_as = inari_shrine_county
+		}
+
+		cp:councillor_steward = {
+			save_scope_as = steward
+		}
+		cp:councillor_court_chaplain = {
+			save_scope_as = court_chaplain
+		}
+
+		create_story = {
+			type = story_inari_shrine
+			save_scope_as = story
+		}
+		scope:story = {
+			set_variable = {
+				name = inari_shrine_county
+				value = scope:inari_shrine_county
+			}
+			set_variable = {
+				name = steward
+				value = scope:steward
+			}
+			set_variable = {
+				name = court_chaplain
+				value = scope:court_chaplain
+			}
+		}
+
+		trigger_event = inari_shrine.1001
+	}
+}
+
+inari_shrine.1001 = {
+	type = character_event
+	title = inari_shrine.1001.t
+	desc = inari_shrine.1001.desc
+	theme = realm 
+
+	left_portrait = {
+		character = cp:councillor_steward
+		animation = personality_cynical
+
+	}
+	right_portrait =  {
+		character = cp:councillor_court_chaplain
+		animation = personality_zealous
+	}
+
+	# immediate = {
+	# 	cp:councillor_steward = {
+	# 		save_scope_as = steward
+	# 	}
+	# 	cp:councillor_court_chaplain = {
+	# 		save_scope_as = court_chaplain
+	# 	}
+	# }
+
+	option = { # Chase the Fox off
+		name = inari_shrine.1001.a
+		add_piety = minor_piety_loss
+		random_list = {
+			50 = {
+				trigger_event = { 
+					id = inari_shrine.1002 
+					months = {1 3}
+				}
+				custom_tooltip = inari_shrine.1001.a.tt
+			}
+			50 ={
+				trigger_event = {
+					id = inari_shrine.9999
+				}
+			}
+		}
+
+	}
+
+	option = { # Kill the fox
+		name = inari_shrine.1001.b
+		add_piety = medium_piety_loss
+		add_character_modifier = sin_killed_divine_messengers
+
+		random_list = {
+			50 = {
+				trigger_event = { 
+					id = inari_shrine.1003 
+					weeks = {1 3}
+				}
+				custom_tooltip = inari_shrine.1001.b.tt
+			}
+			50 ={
+				trigger_event = {
+					id = inari_shrine.9999
+				}
+			}
+		}
+	}
+
+	option = { # Leave offerings
+		trigger = {
+			NOT = {
+				has_trait = cynical
+			}
+		}
+		name = inari_shrine.1001.c
+		add_piety = minor_piety_gain
+		remove_short_term_gold = minor_gold_value
+		trigger_event = {
+			id = inari_shrine.1004
+			weeks = {3 15}
+		}
+	}
+
+}
+
+# End the Story 
+
+inari_shrine.9999 = {
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { exists = scope:story }
+			scope:story = { end_story = yes }
+		}
+	}
+}

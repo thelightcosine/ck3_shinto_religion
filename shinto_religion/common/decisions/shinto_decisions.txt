@@ -5,6 +5,7 @@
 
 	major = yes
 	ai_goal = no
+	ai_check_interval = 1
 	
 	confirm_text = shinto_startup_decision_button
 

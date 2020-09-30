@@ -50,6 +50,23 @@
  shinto_divine_realm:0 "Takamagahara"
  shinto_death_deity_name:0 "Izanami"
  shinto_death_deity_name_possesive:0 "Izanami's"
+ shinto_bishop:0 "High Priest"
+ shinto_bishop_plural:0 "High Priests"
+
+ councillor_court_chaplain_shinto_religion_county:0 "Court Priest"
+ councillor_court_chaplain_shinto_religion_county_female:0 "Court Priestess"
+ councillor_court_chaplain_shinto_religion_county_possesive:0 "Court Priest's"
+ councillor_court_chaplain_shinto_religion_county_female_possesive:0 "Court Priestess'"
+
+ councillor_court_chaplain_shinto_religion_duchy:0 "High Priest"
+ councillor_court_chaplain_shinto_religion_duchy_female:0 "High Priestess"
+ councillor_court_chaplain_shinto_religion_duchy_possesive:0 "High Priest's"
+ councillor_court_chaplain_shinto_religion_duchy_female_possesive:0 "High Priestess'"
+
+ councillor_court_chaplain_shinto_religion_kingdom:0 "Kannushi"
+ councillor_court_chaplain_shinto_religion_kingdom_female:0 "Kannushi"
+ councillor_court_chaplain_shinto_religion_kingdom_possesive:0 "Kannushi's"
+ councillor_court_chaplain_shinto_religion_kingdom_female_possesive:0 "Kannushi's"
  
  kami_no_michi:0 "Kami-no-michi"
  kami_no_michi_adj:0 "Shinto"

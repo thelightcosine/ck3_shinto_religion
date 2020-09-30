@@ -1,0 +1,35 @@
+GetActualBishopTitle = { 
+	type = character
+
+	#Shinto
+	text = {
+		trigger = {
+			liege.highest_held_title_tier >= tier_kingdom
+			faith.religion = religion:shinto_religion
+		}
+		localization_key = councillor_court_chaplain_shinto_religion_kingdom
+	}
+	text = {
+		trigger = {
+			liege.highest_held_title_tier >= tier_duchy
+			faith.religion = religion:shinto_religion
+		}
+		localization_key = councillor_court_chaplain_shinto_religion_duchy
+	}
+	text = {
+		trigger = {
+			liege.highest_held_title_tier < tier_duchy
+			faith.religion = religion:shinto_religion
+			is_female = no
+		}
+		localization_key = councillor_court_chaplain_shinto_religion_county
+	}
+	text = {
+		trigger = {
+			liege.highest_held_title_tier < tier_duchy
+			faith.religion = religion:shinto_religion
+			is_female = yes
+		}
+		localization_key = councillor_court_chaplain_shinto_religion_county_female
+	}
+}

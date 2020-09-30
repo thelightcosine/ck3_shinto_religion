@@ -3,4 +3,4 @@ tags={
 	"Religion"
 }
 name="Shinto Religion"
-supported_version="1.0.3"
+supported_version="1.1.*"

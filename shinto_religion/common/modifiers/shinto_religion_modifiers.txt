@@ -1,0 +1,11 @@
+sin_killed_divine_messengers = {
+	icon = piety_negative
+	monthly_piety = -1
+	same_faith_opinion = -10
+}
+
+virtue_built_shrine = {
+	icon = piety_positive
+	monthly_piety = 1
+	same_faith_opinion = 10
+}

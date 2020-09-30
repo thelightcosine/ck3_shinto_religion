@@ -1,2 +1,10 @@
 ﻿l_english:
  shinto_startup_decision.trigger:0 "Your Realm will convert to a Shinto Faith"
+
+ inari_shrine.1001.t:0 "Divine Messenger?"
+ inari_shrine.1001.desc:0 "The sounds of raised voices brings me to the council chambers, to find [steward.Custom2('MyCharacterIntroduction', ROOT.Char)] and [court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] arguing. It seems that a fox has been getting into the chicken coops in [inari_shrine_county.GetName]. [court_chaplain.GetName] insists that this Fox is one of the Divine Messengers, a servant of Inari. [steward.GetName] argue that it is a common pest and needs to be chased off before more damage is done to the local farmers."
+ inari_shrine.1001.a:0 "Chase the Fox off, but do it gently."
+ inari_shrine.1001.b:0 "Get a hunter, they'll deal with this."
+ inari_shrine.1001.c:0 "We should leave offerings to the Divine Messenger."
+ inari_shrine.1001.a.tt:0 "The fox comes back..."
+ inari_shrine.1001.b.tt:0 "Face Inari's displeasure..."

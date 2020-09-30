@@ -1,0 +1,23 @@
+story_inari_shrine = {
+
+	on_setup = {
+		story_owner = { # End the story on its own after a while
+			trigger_event = {
+				id = inari_shrine.9999
+				years = 5
+			}
+		}
+	}
+
+	on_end = {
+		debug_log = "Inari Shrine story ended on:"
+		debug_log_date = yes
+		scope:story_owner = {
+			add_character_flag = { flag = inari_shrine_completed }
+		}
+	}
+
+	on_owner_death = {
+		end_story = yes
+	}
+}
