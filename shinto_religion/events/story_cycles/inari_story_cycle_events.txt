@@ -1,4 +1,4 @@
-namespace = inari_shrine
+﻿namespace = inari_shrine
 
 inari_shrine.0001 = {
 	hidden = yes 
@@ -27,13 +27,6 @@ inari_shrine.0001 = {
 			save_scope_as = inari_shrine_county
 		}
 
-		cp:councillor_steward = {
-			save_scope_as = steward
-		}
-		cp:councillor_court_chaplain = {
-			save_scope_as = court_chaplain
-		}
-
 		create_story = {
 			type = story_inari_shrine
 			save_scope_as = story
@@ -42,14 +35,6 @@ inari_shrine.0001 = {
 			set_variable = {
 				name = inari_shrine_county
 				value = scope:inari_shrine_county
-			}
-			set_variable = {
-				name = steward
-				value = scope:steward
-			}
-			set_variable = {
-				name = court_chaplain
-				value = scope:court_chaplain
 			}
 		}
 
@@ -73,18 +58,22 @@ inari_shrine.1001 = {
 		animation = personality_zealous
 	}
 
-	# immediate = {
-	# 	cp:councillor_steward = {
-	# 		save_scope_as = steward
-	# 	}
-	# 	cp:councillor_court_chaplain = {
-	# 		save_scope_as = court_chaplain
-	# 	}
-	# }
-
 	option = { # Chase the Fox off
 		name = inari_shrine.1001.a
 		add_piety = minor_piety_loss
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = -10
+			modifier = disappointed_opinion
+		}		
+
 		random_list = {
 			50 = {
 				trigger_event = { 
@@ -106,6 +95,18 @@ inari_shrine.1001 = {
 		name = inari_shrine.1001.b
 		add_piety = medium_piety_loss
 		add_character_modifier = sin_killed_divine_messengers
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = -10
+			modifier = disappointed_opinion
+		}
 
 		random_list = {
 			50 = {
@@ -132,6 +133,19 @@ inari_shrine.1001 = {
 		name = inari_shrine.1001.c
 		add_piety = minor_piety_gain
 		remove_short_term_gold = minor_gold_value
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = -10
+			modifier = disappointed_opinion
+		}
+
 		trigger_event = {
 			id = inari_shrine.1004
 			weeks = {3 15}
