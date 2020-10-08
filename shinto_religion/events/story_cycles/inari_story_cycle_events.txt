@@ -58,6 +58,15 @@ inari_shrine.1001 = {
 		animation = personality_zealous
 	}
 
+	immediate = {
+		cp:councillor_steward = {
+			save_scope_as = steward
+		}
+		cp:councillor_court_chaplain = {
+			save_scope_as = court_chaplain
+		}
+	}
+
 	option = { # Chase the Fox off
 		name = inari_shrine.1001.a
 		add_piety = minor_piety_loss
@@ -78,7 +87,7 @@ inari_shrine.1001 = {
 			50 = {
 				trigger_event = { 
 					id = inari_shrine.1002 
-					months = {1 3}
+					# months = {1 3}
 				}
 				custom_tooltip = inari_shrine.1001.a.tt
 			}
@@ -112,7 +121,7 @@ inari_shrine.1001 = {
 			50 = {
 				trigger_event = { 
 					id = inari_shrine.1003 
-					weeks = {1 3}
+					# weeks = {1 3}
 				}
 				custom_tooltip = inari_shrine.1001.b.tt
 			}
@@ -148,11 +157,365 @@ inari_shrine.1001 = {
 
 		trigger_event = {
 			id = inari_shrine.1004
-			weeks = {3 15}
+			# weeks = {3 15}
 		}
 	}
 
 }
+
+inari_shrine.1002 = { # The Fox returns
+	type = character_event
+	title = inari_shrine.1002.t
+	desc = inari_shrine.1002.desc
+	theme = realm 
+
+	left_portrait = {
+		character = cp:councillor_steward
+		animation = personality_cynical
+
+	}
+	right_portrait =  {
+		character = cp:councillor_court_chaplain
+		animation = personality_zealous
+	}
+
+	immediate = {
+		remove_short_term_gold = minor_gold_value
+	}
+
+	option = { # Kill the fox
+		name = inari_shrine.1001.b
+		add_piety = medium_piety_loss
+		add_character_modifier = sin_killed_divine_messengers
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = -10
+			modifier = disappointed_opinion
+		}
+
+		random_list = {
+			50 = {
+				trigger_event = { 
+					id = inari_shrine.1003 
+					# weeks = {1 3}
+				}
+				custom_tooltip = inari_shrine.1001.b.tt
+			}
+			50 ={
+				trigger_event = {
+					id = inari_shrine.9999
+				}
+			}
+		}
+	}
+
+	option = { # Leave offerings
+		trigger = {
+			NOT = {
+				has_trait = cynical
+			}
+		}
+		name = inari_shrine.1001.c
+		add_piety = minor_piety_gain
+		remove_short_term_gold = minor_gold_value
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = -10
+			modifier = disappointed_opinion
+		}
+
+		trigger_event = {
+			id = inari_shrine.1004
+			# weeks = {3 15}
+		}
+	}
+
+}
+
+inari_shrine.1003 = { # Inari's wrath
+	type = character_event
+	title = inari_shrine.1003.t
+	desc = inari_shrine.1003.desc
+	theme = realm 
+
+	right_portrait =  {
+		character = cp:councillor_court_chaplain
+		animation = rage
+	}
+
+	immediate = {
+		scope:story.var:inari_shrine_county = {
+			add_county_modifier = {
+				modifier = county_pest_infestation
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = inari_shrine.1003.a
+		trigger_event = {
+			id = inari_shrine.9999
+		}
+	}
+}
+
+inari_shrine.1004 = { # More Foxes appear
+	type = character_event
+	title = inari_shrine.1004.t
+	desc = inari_shrine.1004.desc
+	theme = realm 
+
+	left_portrait = {
+		character = cp:councillor_steward
+		animation = disgust
+
+	}
+	right_portrait =  {
+		character = cp:councillor_court_chaplain
+		animation = personality_zealous
+	}
+
+	option = {
+		name = inari_shrine.1004.a
+		add_piety = minor_piety_loss
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = -10
+			modifier = disappointed_opinion
+		}	
+		trigger_event = {
+			id = inari_shrine.9999
+		}	
+	}
+
+	option = {
+		name = inari_shrine.1004.b
+		scope:story.var:inari_shrine_county = {
+			add_county_modifier = {
+				modifier = county_fox_infestation
+				years = 5
+			}
+		}
+		trigger_event = {
+			id = inari_shrine.9999
+		}	
+	}
+
+	option = {
+		name = inari_shrine.1004.c
+		add_piety = medium_piety_loss
+		add_character_modifier = sin_killed_divine_messengers
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain 
+			opinion = -10
+			modifier = disappointed_opinion
+		}
+
+		trigger_event = { 
+			id = inari_shrine.1003 
+			# weeks = {1 3}
+		}
+
+	}
+
+	option = {
+		name = inari_shrine.1004.d
+		add_piety = medium_piety_gain
+		add_character_modifier = virtue_built_shrine
+
+		reverse_add_opinion = {
+			target = cp:councillor_court_chaplain
+			opinion = 10
+			modifier = respect_opinion
+		}
+
+		scope:story.var:inari_shrine_county = {
+			add_county_modifier = {
+				modifier = county_inari_shrine
+			}
+		}
+
+		random_list = { 
+			70 = {
+				trigger_event = { 
+					id = inari_shrine.1006 
+					# weeks = {1 3}
+				}
+			}
+
+			30 = {
+				trigger_event = { 
+					id = inari_shrine.1005 
+					# weeks = {1 3}
+				}
+			}
+		}
+	}
+	
+}
+
+inari_shrine.1005 = { # Pest Control
+	type = character_event
+	title = inari_shrine.1005.t
+	desc = inari_shrine.1005.desc
+	theme = realm 
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = happiness
+
+	}
+
+	immediate = {
+		scope:story.var:inari_shrine_county = {
+			add_county_modifier = {
+				modifier = county_pest_control
+			}
+		}
+
+		reverse_add_opinion = {
+			target = cp:councillor_steward 
+			opinion = 10
+			modifier = respect_opinion
+		}
+	}
+
+	option = {
+		name = inari_shrine.1005.a
+		trigger_event = { 
+			id = inari_shrine.1006 
+			# weeks = {1 3}
+		}
+	}
+
+}
+
+# inari_shrine.1006 = { # A question of faith
+# 	type = character_event
+# 	title = inari_shrine.1006.t
+# 	desc = inari_shrine.1006.desc
+# 	theme = realm 
+# 	override_background = {
+# 		event_background = farmland
+# 	}
+
+# 	option = {
+# 		name = inari_shrine.1006.a
+# 		duel = {
+# 			skill = diplomacy
+# 			value = 10
+# 			50 = {		
+# 				compare_modifier = {
+# 					value = scope:duel_value
+# 					multiplier = 3.5
+# 					min = -49
+# 				}
+# 				desc = inari_shrine.1006.a.success
+# 				show_as_tooltip = {
+# 					add_prestige = minor_prestige_gain
+# 				}
+# 				trigger_event =m {
+# 					id = inari_shrine.1007 
+# 					weeks = {1 3}
+# 				}
+# 			}
+# 			50 = {		
+# 				compare_modifier = {
+# 					value = scope:duel_value
+# 					multiplier = -3.5
+# 					min = -49
+# 				}
+# 				desc = inari_shrine.1006.a.failure
+# 				show_as_tooltip = {
+# 					add_prestige = minor_prestige_loss
+# 					remove_county_modifier = county_inari_shrine
+# 				}
+# 				trigger_event = {
+# 					id =  inari_shrine.9999
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = inari_shrine.1006.b
+# 		duel = {
+# 			skill = learning
+# 			value = 10
+# 			50 = {		
+# 				compare_modifier = {
+# 					value = scope:duel_value
+# 					multiplier = 3.5
+# 					min = -49
+# 				}
+# 				desc = inari_shrine.1006.b.success
+# 				show_as_tooltip = {
+# 					add_piety = major_piety_gain
+# 				}
+# 				trigger_event =m {
+# 					id = inari_shrine.1007 
+# 					weeks = {1 3}
+# 				}
+# 			}
+# 			50 = {		
+# 				compare_modifier = {
+# 					value = scope:duel_value
+# 					multiplier = -3.5
+# 					min = -49
+# 				}
+# 				desc = inari_shrine.1006.failure
+# 				show_as_tooltip = {
+# 					add_piety = minor_piety_loss
+# 					remove_county_modifier = county_inari_shrine
+# 				}
+# 				trigger_event = {
+# 					id =  inari_shrine.9999
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = inari_shrine.1006.c
+# 		remove_county_modifier = county_inari_shrine
+# 		add_piety = medium_piety_loss
+# 		trigger_event = {
+# 			id = inari_shrine.9999
+# 		}
+# 	}
+
+# }
+
+
 
 # End the Story 
 

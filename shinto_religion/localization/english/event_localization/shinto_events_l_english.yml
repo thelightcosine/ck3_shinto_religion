@@ -2,9 +2,38 @@
  shinto_startup_decision.trigger:0 "Your Realm will convert to a Shinto Faith"
 
  inari_shrine.1001.t:0 "Divine Messenger?"
- inari_shrine.1001.desc:0 "The sounds of raised voices brings me to the council chambers, to find [steward.Custom2('MyCharacterIntroduction', ROOT.Char)] and [court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] arguing. It seems that a fox has been getting into the chicken coops in [inari_shrine_county.GetName]. [court_chaplain.GetName] insists that this Fox is one of the Divine Messengers, a servant of Inari. [steward.GetName] argue that it is a common pest and needs to be chased off before more damage is done to the local farmers."
+ inari_shrine.1001.desc:0 "The sounds of raised voices brings me to the council chambers, to find [steward.Custom2('MyCharacterIntroduction', ROOT.Char)] and [court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] arguing. It seems that a fox has been getting into the chicken coops in [inari_shrine_county.GetName]. [court_chaplain.GetName] insists that this Fox is one of the Divine Messengers, a servant of Inari. [steward.GetName] argues that it is a common pest and needs to be chased off before more damage is done to the local farmers."
+
  inari_shrine.1001.a:0 "Chase the Fox off, but do it gently."
  inari_shrine.1001.b:0 "Get a hunter, they'll deal with this."
  inari_shrine.1001.c:0 "We should leave offerings to the Divine Messenger."
  inari_shrine.1001.a.tt:0 "The fox comes back..."
  inari_shrine.1001.b.tt:0 "Face Inari's displeasure..."
+
+ inari_shrine.1002.t:0 "The Fox returns"
+ inari_shrine.1002.desc:0 "The fox from earlier has been spotted in [inari_shrine_county.GetName]. [steward.Custom2('MyCharacterIntroduction', ROOT.Char)] beleives we should pay hunters to kill the fox and be done with it. [court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] cautions that we risk incurring the wrath of Inari if we do not show proper deference."
+
+ inari_shrine.1003.t:0 "Inari's Wrath"
+ inari_shrine.1003.desc:0 "[court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] can barely contain their anger. I warned you that this would happen. A plague of rats has swarmed [var:inari_shrine_county.GetName], destroying our crops. This is the wrath of Inari for your transgressions."
+ inari_shrine.1003.a:0 "There is nothing to be done about it now"
+
+ inari_shrine.1004.t:0 "Sign or Infestation?"
+ inari_shrine.1004.desc:0 "[inari_shrine_county.GetName] has seen a sudden increase in the fox population. There have been dozens of them sighted in the area. [court_chaplain.Custom2('MyCharacterIntroduction', ROOT.Char)] insists it is a message from inari, but [steward.Custom2('MyCharacterIntroduction', ROOT.Char)] says it is an ifnestation."
+ inari_shrine.1004.a:0 "Time to drive these foxes off for good."
+ inari_shrine.1004.b:0 "We should not intervene in the affairs of the Kami"
+ inari_shrine.1004.c:0 "Hire the best hunters you can find."
+ inari_shrine.1004.d:0 "It's a sign! Build a shrine to Inari."
+
+ inari_shrine.1005.t:0 "Pest Control"
+ inari_shrine.1005.desc:0 "[steward.Custom2('MyCharacterIntroduction', ROOT.Char)] reports that [inari_shrine_county.GetName] has seen a sudden dramatic decrease in the rodent population. It seems the foxes have been busy."
+ inari_shrine.1005.a:0 "Inari has provided us a boon."
+
+ inari_shrine.1006.t:0 "A Question of faith"
+ inari_shrine.1006.desc:0 "Some people in [inari_shrine_county.GetName] are starting to doubt the foxes are actually divine messengers at all, but rather ordinary foxes. The farmers want the foxes driven off as they should have been from the begining."
+ inari_shrine.1006.a:0 "Convince the people that these are divine messengers."
+ inari_shrine.1006.a.success:0 "The crowd is convinced"
+ inari_shrine.1006.a.failure:0 "The crowd tears down the shrine to Inari"
+ inari_shrine.1006.b.success:0 "A nine-Tailed fox appears quieting all doubt."
+ inari_shrine.1006.b.failure:0 "The crowd tears down the shrine to Inari"
+ inari_shrine.1006.b:0 "Pray at the Shrine for a sign from Inari."
+#  inari_shrine.1006.c:0 "Clearly there is nothing divine about these creatures."

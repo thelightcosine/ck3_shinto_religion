@@ -7,10 +7,16 @@ county_inari_shrine= {
 
 county_fox_infestation = {
 	icon = economy_negative
-	tax_mult = -0.4
+	tax_mult = -0.2
 }
 
 county_pest_control = {
 	icon = economy_positive
 	tax_mult = 0.4
+	development_growth_factor = small_development_growth_gain
+}
+
+county_pest_infestation = {
+	icon = economy_negative
+	tax_mult = -0.5
 }
