@@ -33,7 +33,19 @@
  inari_shrine.1006.a:0 "Convince the people that these are divine messengers."
  inari_shrine.1006.a.success:0 "The crowd is convinced"
  inari_shrine.1006.a.failure:0 "The crowd tears down the shrine to Inari"
- inari_shrine.1006.b.success:0 "A nine-Tailed fox appears quieting all doubt."
+ inari_shrine.1006.b.success:0 "A sign is given.."
  inari_shrine.1006.b.failure:0 "The crowd tears down the shrine to Inari"
  inari_shrine.1006.b:0 "Pray at the Shrine for a sign from Inari."
-#  inari_shrine.1006.c:0 "Clearly there is nothing divine about these creatures."
+ inari_shrine.1006.c:0 "Clearly there is nothing divine about these creatures."
+
+ inari_shrine.1007.t:0 "Speaker for the Kami"
+ inari_shrine.1007.desc:0 "Your can see the change in the faces of the peasants and farmers as you make your speech. They shuffle their feet akwardly for a few minutes before dispersing, agreeing that the foxes are clearly divine messengers of Inari."
+inari_shrine.1007.a:0 "That should hopefully settle things..."
+
+ inari_shrine.1008.t:0 "A Nine-tails appears"
+ inari_shrine.1008.desc:0 "You sit in meditation and prayer at the Shrine for most of a day, before you hear murmurings in the crowd of gathered farmers and pesants. You open your eyes to see a large fox with brilliant white fur. Streaming out behind the fox are nine tails. The entire gathered crowd bows in reverence, ebfore the fox dissapears into the woods. There is no more questioning of the foxes or the shrine."
+ inari_shrine.1008.a:0 "That should hopefully settle things..."
+
+ inari_shrine.1008.t:0 "The Shrine burns"
+ inari_shrine.1008.desc:0 "You stand by and watch as the peasants tears down the shrine and set it abalaze. Before long, there is nothing left where the Shrine had stood. The mob makes quick work of the foxes in the area as well. Such a shame, it had been a beauitful shrine."
+ inari_shrine.1008.a:0 "Such a shame, it had been a beauitful shrine."
